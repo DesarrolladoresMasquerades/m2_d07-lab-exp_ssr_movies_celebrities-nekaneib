@@ -3,18 +3,23 @@
 
 const { Schema, model } = require("mongoose");
 
-const celebritySchema = new Schema(
+const movieSchema = new Schema(
   {
-    name: {
+    title : {
       type: String,
     },
-    occupation : {
+    genre  : {
       type: String
     },
 
-    catchPhrase : {
+    plot : {
       type: String,
+    },
+
+    cast : {
+      type: []
     }
   });
 
-module.exports = model("Celebrity", celebritySchema);
+  
+module.exports = model("Movie", movieSchema);
